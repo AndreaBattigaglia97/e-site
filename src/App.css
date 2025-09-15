@@ -45,6 +45,7 @@ h1, p {
   text-decoration: none;
   display: inline-flex;
   gap: 8px;
+  align-items: flex-end;
   &:hover {
     background-color: black;
     color: white;

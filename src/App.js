@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
-import SplashCursor from './SplashCursor'
+// import SplashCursor from './SplashCursor'
 import TextType from './TextType';
 
 
@@ -36,12 +36,12 @@ function App() {
           onMouseEnter={() => setEnableSplashCursor(false)}
           onMouseLeave={() => setEnableSplashCursor(true)}
         >
-          <span>DOWNLOAD MY PRES</span>
+          <span>WANNA READ SOMETHING?</span>
           <MdOutlineFileDownload />
         </a>
       </header>
       <div className={`animation-wrapper ${enableSplashCursor ? '' : 'hidden'}`}>
-        <SplashCursor />
+        {/* <SplashCursor /> */}
       </div>
     </div>
   );
