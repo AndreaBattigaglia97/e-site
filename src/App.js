@@ -8,6 +8,9 @@ import TextType from './TextType';
 function App() {
 
   const [enableSplashCursor, setEnableSplashCursor] = useState(true);
+  const defaultPhrases = ["Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "Hi, I'm Ernesto.", "Hi, I'm a screenwriter.","Hi, I'm Ernesto.", "Hi, I'm a screenwriter.", "You still here?", "What are you waiting for?", "There is only one button to click.", "Go ahead, click it.", "You know you want to.", "It's not going to bite.", "It's just a download button.", "For my presentation.", "You can always delete it later.", "But you might find it interesting.", "Just saying.", "Ok, I'll stop now."];
+  // eslint-disable-next-line no-unused-vars
+  const [phrases, setPhrase] = useState(defaultPhrases);
 
   return (
     <div className="App">
@@ -18,7 +21,7 @@ function App() {
         </div>
 
         <TextType 
-          text={["Hi, I'm Ernesto.", "Hi, I'm a screenwriter."]}
+          text={phrases}
           typingSpeed={90}
           pauseDuration={2000}
           showCursor={true}
