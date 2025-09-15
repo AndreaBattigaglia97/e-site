@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { MdOutlineFileDownload } from "react-icons/md";
+import SplashCursor from './SplashCursor'
+
 
 function App() {
+
+  const [enableSplashCursor, setEnableSplashCursor] = useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='logo'>
+          <h1>e</h1>
+          <p className='animation'>.</p>
+        </div>
+
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          href={process.env.PUBLIC_URL + "/GIUNTINI'S DOG & PONY SHOW.pdf"}
+          download
           rel="noopener noreferrer"
+          onMouseEnter={() => setEnableSplashCursor(false)}
+          onMouseLeave={() => setEnableSplashCursor(true)}
         >
-          Learn React
+          <span>DOWNLOAD MY PRES</span>
+          <MdOutlineFileDownload />
         </a>
       </header>
+      <div className={`animation-wrapper ${enableSplashCursor ? '' : 'hidden'}`}>
+        <SplashCursor />
+      </div>
     </div>
   );
 }
