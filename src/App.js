@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
-import SplashCursor from './SplashCursor'
+// import SplashCursor from './SplashCursor'
 import TextType from './TextType';
 
 
@@ -19,7 +19,7 @@ function App() {
 
         <TextType 
           text={["Hi, I'm Ernesto.", "Hi, I'm a screenwriter."]}
-          typingSpeed={75}
+          typingSpeed={90}
           pauseDuration={2000}
           showCursor={true}
           cursorCharacter="|"
