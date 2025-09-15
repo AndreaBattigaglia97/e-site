@@ -79,7 +79,6 @@ h1, p {
   position: absolute;
   top: 16px;
   right: 16px;
-  border: 1px solid black;
   padding: 2px;
   display: flex;
   flex-direction: row;
@@ -94,11 +93,13 @@ h1, p {
     color: black;
     text-decoration: none;
     text-decoration: none;
+    color: gray;
 
     &.active {
-      background-color: #000000;
-      color: white;
-      border-radius: 4px;
+      color: black;
+    }
+    &:first-child {
+      border-right: #000000 solid 1px;
     }
   }
 }
