@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  .App {
+    filter: invert(1);
+  }
+  body {
+    background-color: #000000;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: #000000;
   gap: 24px;
   z-index: 999;
 }
@@ -30,7 +39,7 @@
 }
 
 h1, p {
-  color: black;
+  color: #000000;
   font-size: 100px;
   margin: 0;
 }
@@ -38,7 +47,7 @@ h1, p {
 .App-link {
   color: #000000;
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid #000000;
   padding: 8px 12px;
   border-radius: 18px;
   font-size: 12px;
@@ -47,8 +56,8 @@ h1, p {
   gap: 8px;
   align-items: flex-end;
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -86,20 +95,28 @@ h1, p {
   align-items: center;
   border-radius: 6px;
   button {
+    appearance: none;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    color: black;
+    color: #000000;
     text-decoration: none;
     text-decoration: none;
     color: gray;
+    transition: all 0.3s ease-in-out;
 
     &.active {
-      color: black;
+      color: #000000;
+      font-weight: 600;
     }
     &:first-child {
       border-right: #000000 solid 1px;
     }
   }
+}
+
+.phrases-wrapper {
+  min-height: 40px;
+  padding: 0 16px;
 }

@@ -15,10 +15,16 @@ function App() {
 
   useEffect(() => {
     if (lang === 'it') {
-      setPhrase(["Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.","Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ancora qui?", "Che aspetti?", "Guarda che il pulsante da cliccare è uno.", "Dai, su.", "Dai che ti va.", "Mica morde.", "È solo download.", "Davvero.", "Comunque lo puoi sempre cancellare.", "Magari trovi qualcosa che ti piace.", "Per dire.", "Va bene, basta."]);
+      setPhrase([]);
+      setTimeout(() => {
+        setPhrase(["Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.","Ciao, sono Ernesto.", "Sono un autore e sceneggiatore.", "Ancora qui?", "Che aspetti?", "Guarda che il pulsante da cliccare è uno.", "Dai, su.", "Dai che ti va.", "Mica morde.", "È solo download.", "Davvero.", "Comunque lo puoi sempre cancellare.", "Magari trovi qualcosa che ti piace.", "Per dire.", "Va bene, basta."]);
+      }, 1000);
     } else {
       setLang('en');
-      setPhrase(defaultPhrases);
+      setPhrase([])
+      setTimeout(() => {
+        setPhrase(defaultPhrases);
+      }, 1000);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang])
@@ -26,22 +32,25 @@ function App() {
   return (
     <div className="App">
       <div className='language-switch'>
-        <button className={lang === 'it' ? 'active' : ''} onClick={() => setLang('it')}>IT</button>
-        <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button>
+        <button className={lang === 'it' ? 'active' : ''} onClick={() => phrases.length > 0 && setLang('it')}>IT</button>
+        <button className={lang === 'en' ? 'active' : ''} onClick={() => phrases.length > 0 && setLang('en')}>EN</button>
       </div>
       <header className="App-header">
         <div className='logo'>
           <h1>e</h1>
           <p className='animation'>.</p>
         </div>
-
-        <TextType 
-          text={phrases}
-          typingSpeed={90}
-          pauseDuration={2000}
-          showCursor={true}
-          cursorCharacter="|"
-        />
+        <div className='phrases-wrapper'>
+          {phrases.length > 0 && (
+            <TextType 
+            text={phrases}
+            typingSpeed={90}
+            pauseDuration={2000}
+            showCursor={true}
+            cursorCharacter="|"
+            />
+          )}
+        </div>
 
         <a
           className="App-link"
