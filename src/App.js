@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
-// import SplashCursor from './SplashCursor'
+import SplashCursor from './SplashCursor'
 import TextType from './TextType';
 
 
@@ -38,7 +38,7 @@ function App() {
         </a>
       </header>
       <div className={`animation-wrapper ${enableSplashCursor ? '' : 'hidden'}`}>
-        {/* <SplashCursor /> */}
+        <SplashCursor />
       </div>
     </div>
   );
