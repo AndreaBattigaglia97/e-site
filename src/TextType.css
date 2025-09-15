@@ -4,7 +4,9 @@
 }
 
 .text-type span {
-      color: black !important;
+    color: black !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
   }
   
   .text-type__cursor {
