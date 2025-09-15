@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
 import SplashCursor from './SplashCursor'
+import TextType from './TextType';
 
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
           <p className='animation'>.</p>
         </div>
 
+        <TextType 
+          text={["Hi, I'm Ernesto.", "Hi, I'm a screenwriter."]}
+          typingSpeed={75}
+          pauseDuration={2000}
+          showCursor={true}
+          cursorCharacter="|"
+        />
+
         <a
           className="App-link"
           href={process.env.PUBLIC_URL + "/GIUNTINI'S DOG & PONY SHOW.pdf"}
@@ -29,7 +38,7 @@ function App() {
         </a>
       </header>
       <div className={`animation-wrapper ${enableSplashCursor ? '' : 'hidden'}`}>
-        <SplashCursor />
+        {/* <SplashCursor /> */}
       </div>
     </div>
   );
