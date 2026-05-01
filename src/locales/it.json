@@ -1,1 +1,80 @@
-{}
+{
+  "nav": {
+    "bio": "bio",
+    "works": "lavori",
+    "awards": "premi",
+    "contact": "contatti"
+  },
+  "hero": {
+    "phrases": [
+      "Ciao, sono Ernesto.",
+      "Sono un autore e sceneggiatore.",
+      "Ciao, sono Ernesto.",
+      "Sono un autore e sceneggiatore.",
+      "Ciao, sono Ernesto.",
+      "Sono un autore e sceneggiatore.",
+      "Ciao, sono Ernesto.",
+      "Sono un autore e sceneggiatore.",
+      "Ancora qui?",
+      "Cosa aspetti?",
+      "Scorri un po'.",
+      "Là sotto c'è qualcosa.",
+      "Vai.",
+      "Mica morde.",
+      "Puoi sempre tornare su.",
+      "Magari trovi qualcosa che ti piace.",
+      "Per dire.",
+      "Va bene, basta."
+    ]
+  },
+  "bio": {
+    "heading": "Una voce italiana sul palco del mondo.",
+    "paragraph": "Ernesto Giuntini nasce a Firenze nel 1988 e inizia la sua carriera nel 2010. In oltre quindici anni firma sceneggiature per documentari, cortometraggi e branded content distribuiti in tutto il mondo. Collabora con brand come Maserati, Lamborghini, Alfa Romeo e Macallan, e con produzioni indipendenti premiate nei principali festival internazionali.",
+    "labels": {
+      "born": "NATO",
+      "role": "RUOLO",
+      "languages": "LINGUE",
+      "active": "ATTIVO",
+      "siae": "SIAE",
+      "imdb": "IMDB"
+    },
+    "values": {
+      "born": "Firenze, 21/03/1988",
+      "role": "Sceneggiatore · Autore · Showrunner",
+      "languages": "Italiano · Inglese",
+      "active": "Dal 2010",
+      "siae": "267421-0",
+      "imdb": "Profilo Completo"
+    }
+  },
+  "sections": {
+    "label1": "01 — Featured Films",
+    "label2": "02 — Cortometraggi",
+    "label3": "03 — Branded Content",
+    "seeAll": "Vedi tutti →"
+  },
+  "awards": {
+    "sectionLabel": "04 — Premi",
+    "stat1_num": "30+",
+    "stat1_label": "SELEZIONI INTERNAZIONALI",
+    "stat2_num": "8",
+    "stat2_label": "PREMI VINTI",
+    "stat3_num": "5",
+    "stat3_label": "PAESI DI DISTRIBUZIONE"
+  },
+  "contact": {
+    "sectionLabel": "05 — Contatti",
+    "heading": "PARLIAMO.",
+    "sub": "Produttori, registi e brand manager possono contattarmi per nuovi progetti e collaborazioni.",
+    "phone_label": "TELEFONO",
+    "email_label": "EMAIL",
+    "imdb_label": "IMDB",
+    "imdb_value": "Profilo Completo →",
+    "phone": "+39 340 341 0815",
+    "email": "ernesto.giuntini@gmail.com"
+  },
+  "card": {
+    "watch": "GUARDA IL FILM →",
+    "password": "psw"
+  }
+}

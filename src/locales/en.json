@@ -1,1 +1,80 @@
-{}
+{
+  "nav": {
+    "bio": "bio",
+    "works": "works",
+    "awards": "awards",
+    "contact": "contact"
+  },
+  "hero": {
+    "phrases": [
+      "Hi, I'm Ernesto.",
+      "Hi, I'm an author and screenwriter.",
+      "Hi, I'm Ernesto.",
+      "Hi, I'm an author and screenwriter.",
+      "Hi, I'm Ernesto.",
+      "Hi, I'm an author and screenwriter.",
+      "Hi, I'm Ernesto.",
+      "Hi, I'm an author and screenwriter.",
+      "You still here?",
+      "What are you waiting for?",
+      "Scroll down.",
+      "There's something down there.",
+      "Go ahead.",
+      "It's not going to bite.",
+      "You can always scroll back up.",
+      "But you might find something interesting.",
+      "Just saying.",
+      "Ok, I'll stop now."
+    ]
+  },
+  "bio": {
+    "heading": "An Italian voice on the world stage.",
+    "paragraph": "Ernesto Giuntini was born in Florence in 1988 and began his career in 2010. Over fifteen years he has written screenplays for documentaries, short films, and branded content distributed worldwide. His work spans major brands including Maserati, Lamborghini, Alfa Romeo, and Macallan, alongside award-winning independent productions.",
+    "labels": {
+      "born": "BORN",
+      "role": "ROLE",
+      "languages": "LANGUAGES",
+      "active": "ACTIVE",
+      "siae": "SIAE",
+      "imdb": "IMDB"
+    },
+    "values": {
+      "born": "Florence, 21/03/1988",
+      "role": "Screenwriter · Author · Showrunner",
+      "languages": "Italian · English",
+      "active": "Since 2010",
+      "siae": "267421-0",
+      "imdb": "Full Profile"
+    }
+  },
+  "sections": {
+    "label1": "01 — Featured Films",
+    "label2": "02 — Short Films",
+    "label3": "03 — Branded Content",
+    "seeAll": "See all →"
+  },
+  "awards": {
+    "sectionLabel": "04 — Awards",
+    "stat1_num": "30+",
+    "stat1_label": "INTERNATIONAL SELECTIONS",
+    "stat2_num": "8",
+    "stat2_label": "AWARDS WON",
+    "stat3_num": "5",
+    "stat3_label": "DISTRIBUTION COUNTRIES"
+  },
+  "contact": {
+    "sectionLabel": "05 — Contact",
+    "heading": "LET'S TALK.",
+    "sub": "Producers, directors and brand managers can reach out for new projects and collaborations.",
+    "phone_label": "PHONE",
+    "email_label": "EMAIL",
+    "imdb_label": "IMDB",
+    "imdb_value": "Full Profile →",
+    "phone": "+39 340 341 0815",
+    "email": "ernesto.giuntini@gmail.com"
+  },
+  "card": {
+    "watch": "WATCH FILM →",
+    "password": "pwd"
+  }
+}
