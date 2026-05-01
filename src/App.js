@@ -1,3 +1,4 @@
+import './i18n';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { MdOutlineFileDownload } from "react-icons/md";
