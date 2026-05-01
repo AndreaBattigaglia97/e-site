@@ -23,7 +23,9 @@
 body {
   background-color: var(--black);
   color: var(--white);
+  font-family: var(--font-prose);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-reduced-motion: reduce) {
