@@ -1,0 +1,77 @@
+.bio {
+  padding: 100px 60px;
+  background: var(--black);
+}
+
+.bio__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio__heading {
+  font-family: var(--font-prose);
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.bio__paragraph {
+  font-family: var(--font-prose);
+  font-size: 1.15rem;
+  color: var(--grey-light);
+  line-height: 1.8;
+}
+
+.bio__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 24px;
+}
+
+.bio__label {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--grey-mid);
+  flex-shrink: 0;
+}
+
+.bio__value {
+  font-family: var(--font-prose);
+  font-size: 1rem;
+  color: var(--grey-light);
+  text-align: right;
+}
+
+.bio__link {
+  font-family: var(--font-prose);
+  font-size: 1rem;
+  color: var(--accent-film);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-film);
+}
+
+@media (max-width: 768px) {
+  .bio {
+    padding: 60px 24px;
+  }
+
+  .bio__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .bio__heading {
+    font-size: 2.2rem;
+  }
+}
