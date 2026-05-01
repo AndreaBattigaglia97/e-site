@@ -1,0 +1,41 @@
+.hero {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000000;
+  gap: 24px;
+  z-index: 999;
+  position: relative;
+}
+
+.hero__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero__logo h1,
+.hero__logo p {
+  color: #000000;
+  font-size: 100px;
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.hero__dot {
+  animation: hero-dot-drop 1s ease-out;
+}
+
+@keyframes hero-dot-drop {
+  0%   { transform: translateY(-100vh); }
+  100% { transform: translateY(0); }
+}
+
+.hero__phrases {
+  min-height: 40px;
+  padding: 0 16px;
+}
