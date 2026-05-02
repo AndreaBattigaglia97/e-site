@@ -1,6 +1,6 @@
 .contact {
   padding: 100px 60px;
-  background: #000;
+  background: var(--black);
 }
 
 .contact__section-label {
