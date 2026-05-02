@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import BottomSheet from './BottomSheet';
 import './WorkCard.css';
 
-export default function WorkCard({ item, accentColor, isActive, onActivate, onDeactivate }) {
+export default function WorkCard({ item, accentColor, isActive, onActivate, onDeactivate, isLast }) {
   const { t, i18n } = useTranslation();
   const [sheetOpen, setSheetOpen] = useState(false);
 
@@ -58,8 +58,8 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
 
         {isActive && (
           <div
-            className="work-card__details"
-            style={{ borderTopColor: accentColor }}
+            className={`work-card__details${isLast ? ' work-card__details--left' : ''}`}
+            style={isLast ? { borderRightColor: accentColor } : { borderLeftColor: accentColor }}
           >
             <p className="work-card__meta" style={{ color: accentColor }}>
               {metaLine}

@@ -11,9 +11,7 @@
   overflow: visible;
 }
 
-.work-card:hover,
 .work-card--active {
-  transform: scale(1.06);
   z-index: 10;
 }
 
@@ -75,20 +73,28 @@
 
 .work-card__details {
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+  top: 0;
+  left: 100%;
+  width: 280px;
   background: #0d0d0d;
-  border-top: 2px solid;
+  border-left: 2px solid;
   padding: 16px;
   z-index: 20;
-  min-width: 300px;
+  overflow-y: auto;
+  max-height: 100%;
   animation: card-details-in 0.25s ease-out;
 }
 
+.work-card__details--left {
+  left: auto;
+  right: 100%;
+  border-left: none;
+  border-right: 2px solid;
+}
+
 @keyframes card-details-in {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 .work-card__meta {

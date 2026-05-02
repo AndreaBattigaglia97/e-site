@@ -4,9 +4,6 @@
 }
 
 .shelf__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 60px 20px;
 }
 
@@ -15,14 +12,6 @@
   font-size: 0.55rem;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-}
-
-.shelf__see-all {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--grey-mid);
 }
 
 .shelf__track-wrapper {
