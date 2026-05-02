@@ -23,7 +23,6 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
       <div
         className={`work-card${isActive ? ' work-card--active' : ''}`}
         onMouseEnter={onActivate}
-        onMouseLeave={onDeactivate}
         onClick={() => setSheetOpen(true)}
         role="listitem"
         aria-expanded={isActive}
