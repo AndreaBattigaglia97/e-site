@@ -6,6 +6,8 @@ import './BottomSheet.css';
 export default function BottomSheet({ item, accentColor, onClose }) {
   const { t, i18n } = useTranslation();
   const synopsis = i18n.language === 'it' ? item.synopsis : (item.synopsisEn ?? item.synopsis);
+  const cardImage = item.posterUrl ?? item.bgUrl;
+  const imgStyle = item.posterUrl ? {} : { filter: 'brightness(0.45)' };
 
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose();
@@ -29,6 +31,12 @@ export default function BottomSheet({ item, accentColor, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="bs-close" onClick={onClose} aria-label="Chiudi">×</button>
+
+        {cardImage && (
+          <div className="bs-image-wrap">
+            <img src={cardImage} alt={item.title} className="bs-image" style={imgStyle} />
+          </div>
+        )}
 
         <p className="bs-meta" style={{ color: accentColor }}>
           {[item.type, item.country, item.duration, item.year, item.role]
