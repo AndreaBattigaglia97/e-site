@@ -56,7 +56,7 @@ const branded = [
     awards: [],
     badgeUrls: [],
     posterUrl: null,
-    bgUrl: null,
+    bgUrl: 'https://www.alfaromeo.it/content/dam/alfa/cross/magazine-hub/crafting-a-masterpiece/v-2/mobile.png',
     accentColor: '#4ab8c1',
   },
   {
@@ -176,7 +176,7 @@ const branded = [
     awards: [],
     badgeUrls: [],
     posterUrl: null,
-    bgUrl: null,
+    bgUrl: 'https://rethinkeverything.ilsole24ore.com/wp-content/uploads/sites/4/2023/11/materiali-home.webp',
     accentColor: '#4ab8c1',
   },
   {

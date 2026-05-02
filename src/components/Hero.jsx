@@ -26,9 +26,9 @@ export default function Hero() {
     if (!logo) return;
 
     const onScroll = () => {
-      const progress = Math.min(window.scrollY / (window.innerHeight * 0.3), 1);
+      const progress = Math.min(window.scrollY / (window.innerHeight * 0.8), 1);
       logo.style.opacity = 1 - progress;
-      logo.style.transform = `scale(${1 + progress * 4})`;
+      logo.style.transform = `scale(${1 + progress * 2})`;
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });

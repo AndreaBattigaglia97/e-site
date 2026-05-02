@@ -22,6 +22,7 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
     <>
       <div
         className={`work-card${isActive ? ' work-card--active' : ''}`}
+        data-card-id={item.id}
         onMouseEnter={onActivate}
         onClick={() => setSheetOpen(true)}
         role="listitem"

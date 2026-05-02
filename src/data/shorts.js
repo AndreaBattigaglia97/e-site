@@ -17,7 +17,7 @@ const shorts = [
     scriptUrl: '#',
     awards: [],
     badgeUrls: [],
-    posterUrl: null,
+    posterUrl: 'https://m.media-amazon.com/images/M/MV5BNTFjNmE3NDctZTNlZi00YmU3LWExYmMtODYxMGI1MDcyNzJhXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg',
     bgUrl: '/assets/photos/dream_weaver_bg.jpg',
     accentColor: '#c9a84c',
   },
@@ -58,8 +58,8 @@ const shorts = [
     badgeUrls: Array.from({ length: 16 }, (_, i) =>
       `/assets/award_badges/badge_wasted_${String(i).padStart(2, '0')}.png`
     ),
-    posterUrl: '/assets/posters/dream_weaver_poster.jpg',
-    bgUrl: '/assets/photos/wasted_bg.jpg',
+    posterUrl: 'https://m.media-amazon.com/images/M/MV5BMWM5MTgwZTAtYzJiNC00YmNhLTk5YmMtZWY1YWMzMGRhNTVlXkEyXkFqcGc@._V1_.jpg',
+    bgUrl: 'https://cinetecadibologna.it/programmazione/wp-content/uploads/sites/2/2024/05/WASTED-foto_film_4.png',
     accentColor: '#c9a84c',
   },
   {
@@ -125,8 +125,8 @@ const shorts = [
     badgeUrls: Array.from({ length: 5 }, (_, i) =>
       `/assets/award_badges/badge_love_u_2cb_${String(i).padStart(2, '0')}.png`
     ),
-    posterUrl: null,
-    bgUrl: null,
+    posterUrl: 'https://m.media-amazon.com/images/M/MV5BMTcwOTUyNDYtMmJhNy00NzY5LWI3MjYtNmQzOWU4NjlhMWEyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
+    bgUrl: 'https://directorsnotes.com/wp-content/uploads/2024/01/love_u_2cb_06.jpg',
     accentColor: '#c9a84c',
   },
   {

@@ -6,10 +6,12 @@ import './NetflixShelf.css';
 const CARD_WIDTH = 260;
 const CARD_GAP = 16;
 const SCROLL_BY = (CARD_WIDTH + CARD_GAP) * 3;
+const EXPANDED_WIDTH = 520 + 280;
 
 export default function NetflixShelf({ label, items, accentColor }) {
   const { t } = useTranslation();
   const scrollRef = useRef(null);
+  const scrollingRef = useRef(false);
   const [activeCard, setActiveCard] = useState(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -28,6 +30,23 @@ export default function NetflixShelf({ label, items, accentColor }) {
     updateScrollState();
     return () => el.removeEventListener('scroll', updateScrollState);
   }, [updateScrollState]);
+
+  useEffect(() => {
+    if (!activeCard || !scrollRef.current) return;
+    const shelf = scrollRef.current;
+    const cardEl = shelf.querySelector(`[data-card-id="${activeCard}"]`);
+    if (!cardEl) return;
+
+    const cardRight = cardEl.offsetLeft + EXPANDED_WIDTH;
+    const shelfRight = shelf.scrollLeft + shelf.clientWidth;
+    const overflow = cardRight - shelfRight;
+
+    if (overflow > 0) {
+      scrollingRef.current = true;
+      shelf.scrollBy({ left: overflow + 32, behavior: 'smooth' });
+      setTimeout(() => { scrollingRef.current = false; }, 600);
+    }
+  }, [activeCard]);
 
   const scroll = (dir) => {
     scrollRef.current?.scrollBy({ left: dir * SCROLL_BY, behavior: 'smooth' });
@@ -66,7 +85,7 @@ export default function NetflixShelf({ label, items, accentColor }) {
               item={item}
               accentColor={accentColor}
               isActive={activeCard === item.id}
-              onActivate={() => setActiveCard(item.id)}
+              onActivate={() => { if (!scrollingRef.current) setActiveCard(item.id); }}
               onDeactivate={() => setActiveCard(null)}
             />
           ))}

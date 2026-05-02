@@ -18,7 +18,6 @@ export default function Bio() {
     <section className="bio">
       <div className="bio__grid" ref={ref}>
         <div className="bio__left">
-          <h2 className="bio__heading">{t('bio.heading')}</h2>
           <p className="bio__paragraph">{t('bio.paragraph')}</p>
         </div>
         <div className="bio__right">

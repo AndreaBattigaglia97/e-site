@@ -32,7 +32,6 @@ export default function Contact() {
       </p>
       <div className="contact__grid" ref={ref}>
         <div className="contact__left">
-          <h2 className="contact__heading">{t('contact.heading')}</h2>
           <p className="contact__sub">{t('contact.sub')}</p>
         </div>
         <div className="contact__right">
