@@ -23,10 +23,16 @@
   to   { transform: translateY(0); }
 }
 
+.bs-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 .bs-image-wrap {
-  width: calc(100% + 48px);
-  margin: -28px -24px 24px;
-  height: 200px;
+  flex-shrink: 0;
+  width: 120px;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
 }
 
@@ -35,6 +41,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.bs-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .bs-close {

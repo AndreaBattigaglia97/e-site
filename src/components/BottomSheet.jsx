@@ -32,54 +32,58 @@ export default function BottomSheet({ item, accentColor, onClose }) {
       >
         <button className="bs-close" onClick={onClose} aria-label="Chiudi">×</button>
 
-        {cardImage && (
-          <div className="bs-image-wrap">
-            <img src={cardImage} alt={item.title} className="bs-image" style={imgStyle} />
-          </div>
-        )}
+        <div className="bs-body">
+          {cardImage && (
+            <div className="bs-image-wrap">
+              <img src={cardImage} alt={item.title} className="bs-image" style={imgStyle} />
+            </div>
+          )}
 
-        <p className="bs-meta" style={{ color: accentColor }}>
-          {[item.type, item.country, item.duration, item.year, item.role]
-            .filter(Boolean)
-            .join(' · ')}
-        </p>
+          <div className="bs-content">
+            <p className="bs-meta" style={{ color: accentColor }}>
+              {[item.type, item.country, item.duration, item.year, item.role]
+                .filter(Boolean)
+                .join(' · ')}
+            </p>
 
-        <h2 className="bs-title">{item.title}</h2>
+            <h2 className="bs-title">{item.title}</h2>
 
-        {(item.director || item.production) && (
-          <p className="bs-credits">
-            {item.director && `Regia: ${item.director}`}
-            {item.director && item.production && ' — '}
-            {item.production && `Prod: ${item.production}`}
-          </p>
-        )}
-
-        {synopsis && <p className="bs-synopsis">{synopsis}</p>}
-
-        {item.badgeUrls?.length > 0 && (
-          <div className="bs-badges">
-            {item.badgeUrls.map((url, i) => (
-              <img key={i} src={url} alt="" className="bs-badge" loading="lazy" />
-            ))}
-          </div>
-        )}
-
-        {item.watchUrl && item.watchUrl !== '#' && (
-          <a
-            className="bs-watch"
-            href={item.watchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: accentColor }}
-          >
-            {t('card.watch')}
-            {item.watchPassword && (
-              <span className="bs-password">
-                {' '}({t('card.password')}: {item.watchPassword})
-              </span>
+            {(item.director || item.production) && (
+              <p className="bs-credits">
+                {item.director && `Regia: ${item.director}`}
+                {item.director && item.production && ' — '}
+                {item.production && `Prod: ${item.production}`}
+              </p>
             )}
-          </a>
-        )}
+
+            {synopsis && <p className="bs-synopsis">{synopsis}</p>}
+
+            {item.badgeUrls?.length > 0 && (
+              <div className="bs-badges">
+                {item.badgeUrls.map((url, i) => (
+                  <img key={i} src={url} alt="" className="bs-badge" loading="lazy" />
+                ))}
+              </div>
+            )}
+
+            {item.watchUrl && item.watchUrl !== '#' && (
+              <a
+                className="bs-watch"
+                href={item.watchUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: accentColor }}
+              >
+                {t('card.watch')}
+                {item.watchPassword && (
+                  <span className="bs-password">
+                    {' '}({t('card.password')}: {item.watchPassword})
+                  </span>
+                )}
+              </a>
+            )}
+          </div>
+        </div>
       </div>
     </div>,
     document.body
