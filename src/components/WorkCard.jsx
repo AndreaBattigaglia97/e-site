@@ -6,7 +6,6 @@ import './WorkCard.css';
 export default function WorkCard({ item, accentColor, isActive, onActivate, onDeactivate }) {
   const { t, i18n } = useTranslation();
   const [sheetOpen, setSheetOpen] = useState(false);
-  const [onPanel, setOnPanel] = useState(false);
 
   const cardImage = item.bgUrl;
   const imgStyle = { filter: 'brightness(0.35)' };
@@ -22,7 +21,7 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
   return (
     <>
       <div
-        className={`work-card${isActive ? ' work-card--active' : ''}${onPanel ? ' work-card--on-panel' : ''}`}
+        className={`work-card${isActive ? ' work-card--active' : ''}`}
         onMouseEnter={onActivate}
         onMouseLeave={onDeactivate}
         onClick={() => setSheetOpen(true)}
@@ -64,8 +63,6 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
           <div
             className="work-card__details"
             style={{ borderLeftColor: accentColor }}
-            onMouseEnter={() => setOnPanel(true)}
-            onMouseLeave={() => setOnPanel(false)}
             onClick={(e) => e.stopPropagation()}
           >
             <p className="work-card__meta" style={{ color: accentColor }}>
