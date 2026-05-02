@@ -17,7 +17,7 @@ const shorts = [
     scriptUrl: '#',
     awards: [],
     badgeUrls: [],
-    posterUrl: '/assets/posters/dream_weaver_poster.jpg',
+    posterUrl: null,
     bgUrl: '/assets/photos/dream_weaver_bg.jpg',
     accentColor: '#c9a84c',
   },
@@ -58,7 +58,7 @@ const shorts = [
     badgeUrls: Array.from({ length: 16 }, (_, i) =>
       `/assets/award_badges/badge_wasted_${String(i).padStart(2, '0')}.png`
     ),
-    posterUrl: null,
+    posterUrl: '/assets/posters/dream_weaver_poster.jpg',
     bgUrl: '/assets/photos/wasted_bg.jpg',
     accentColor: '#c9a84c',
   },
@@ -126,7 +126,7 @@ const shorts = [
       `/assets/award_badges/badge_love_u_2cb_${String(i).padStart(2, '0')}.png`
     ),
     posterUrl: null,
-    bgUrl: '/assets/photos/love_u_2cb_bg.jpg',
+    bgUrl: null,
     accentColor: '#c9a84c',
   },
   {
