@@ -60,7 +60,7 @@ export default function NetflixShelf({ label, items, accentColor }) {
           ref={scrollRef}
           role="list"
         >
-          {items.map((item, index) => (
+          {items.map((item) => (
             <WorkCard
               key={item.id}
               item={item}
@@ -68,7 +68,6 @@ export default function NetflixShelf({ label, items, accentColor }) {
               isActive={activeCard === item.id}
               onActivate={() => setActiveCard(item.id)}
               onDeactivate={() => setActiveCard(null)}
-              isLast={index === items.length - 1}
             />
           ))}
         </div>

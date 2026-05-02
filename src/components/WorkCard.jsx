@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import BottomSheet from './BottomSheet';
 import './WorkCard.css';
 
-export default function WorkCard({ item, accentColor, isActive, onActivate, onDeactivate, isLast }) {
+export default function WorkCard({ item, accentColor, isActive, onActivate, onDeactivate }) {
   const { t, i18n } = useTranslation();
   const [sheetOpen, setSheetOpen] = useState(false);
 
@@ -32,35 +32,38 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
         onBlur={onDeactivate}
         onKeyDown={(e) => e.key === 'Enter' && setSheetOpen(true)}
       >
-        {cardImage ? (
-          <img
-            src={cardImage}
-            alt={item.title}
-            className="work-card__img"
-            style={imgStyle}
-            loading="lazy"
-          />
-        ) : (
-          <div className="work-card__placeholder">
-            <span className="work-card__placeholder-title">{item.title}</span>
-          </div>
-        )}
-
-        <div className="work-card__overlay">
-          <p className="work-card__type" style={{ color: accentColor }}>
-            {item.type}
-          </p>
-          <h3 className="work-card__title">{item.client ?? item.title}</h3>
-          {item.client && (
-            <p className="work-card__subtitle">{item.title}</p>
+        <div className="work-card__media">
+          {cardImage ? (
+            <img
+              src={cardImage}
+              alt={item.title}
+              className="work-card__img"
+              style={imgStyle}
+              loading="lazy"
+            />
+          ) : (
+            <div className="work-card__placeholder">
+              <span className="work-card__placeholder-title">{item.title}</span>
+            </div>
           )}
-          <p className="work-card__year">{item.year}</p>
+
+          <div className="work-card__overlay">
+            <p className="work-card__type" style={{ color: accentColor }}>
+              {item.type}
+            </p>
+            <h3 className="work-card__title">{item.client ?? item.title}</h3>
+            {item.client && (
+              <p className="work-card__subtitle">{item.title}</p>
+            )}
+            <p className="work-card__year">{item.year}</p>
+          </div>
         </div>
 
         {isActive && (
           <div
-            className={`work-card__details${isLast ? ' work-card__details--left' : ''}`}
-            style={isLast ? { borderRightColor: accentColor } : { borderLeftColor: accentColor }}
+            className="work-card__details"
+            style={{ borderLeftColor: accentColor }}
+            onClick={(e) => e.stopPropagation()}
           >
             <p className="work-card__meta" style={{ color: accentColor }}>
               {metaLine}
