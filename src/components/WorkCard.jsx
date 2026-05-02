@@ -50,7 +50,10 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
           <p className="work-card__type" style={{ color: accentColor }}>
             {item.type}
           </p>
-          <h3 className="work-card__title">{item.title}</h3>
+          <h3 className="work-card__title">{item.client ?? item.title}</h3>
+          {item.client && (
+            <p className="work-card__subtitle">{item.title}</p>
+          )}
           <p className="work-card__year">{item.year}</p>
         </div>
 

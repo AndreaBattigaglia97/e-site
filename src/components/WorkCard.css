@@ -66,6 +66,14 @@
   margin-bottom: 4px;
 }
 
+.work-card__subtitle {
+  font-family: var(--font-prose);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--grey-light);
+  margin-bottom: 2px;
+}
+
 .work-card__year {
   font-family: var(--font-mono);
   font-size: 0.5rem;
