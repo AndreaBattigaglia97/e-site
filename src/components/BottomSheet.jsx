@@ -7,7 +7,7 @@ export default function BottomSheet({ item, accentColor, onClose }) {
   const { t, i18n } = useTranslation();
   const synopsis = i18n.language === 'it' ? item.synopsis : (item.synopsisEn ?? item.synopsis);
   const cardImage = item.posterUrl ?? item.bgUrl;
-  const imgStyle = item.posterUrl ? {} : { filter: 'brightness(0.45)' };
+  const imgStyle = item.posterUrl ? {} : { filter: 'brightness(0.55)' };
 
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose();

@@ -22,7 +22,7 @@ const baseItem = {
   accentColor: '#c9a84c',
 };
 
-test('WorkCard uses posterUrl as image when available', () => {
+test('WorkCard always uses bgUrl in the carousel', () => {
   const item = { ...baseItem, posterUrl: '/poster.jpg', bgUrl: '/bg.jpg' };
   render(
     <I18nextProvider i18n={i18n}>
@@ -30,16 +30,16 @@ test('WorkCard uses posterUrl as image when available', () => {
     </I18nextProvider>
   );
   const img = screen.getByRole('img');
-  expect(img).toHaveAttribute('src', '/poster.jpg');
+  expect(img).toHaveAttribute('src', '/bg.jpg');
 });
 
-test('WorkCard uses bgUrl when posterUrl is null', () => {
-  const item = { ...baseItem, posterUrl: null, bgUrl: '/bg.jpg' };
+test('WorkCard shows placeholder when bgUrl is null', () => {
+  const item = { ...baseItem, posterUrl: '/poster.jpg', bgUrl: null };
   render(
     <I18nextProvider i18n={i18n}>
       <WorkCard item={item} accentColor="#c9a84c" isActive={false} onActivate={() => {}} onDeactivate={() => {}} />
     </I18nextProvider>
   );
-  const img = screen.getByRole('img');
-  expect(img).toHaveAttribute('src', '/bg.jpg');
+  expect(screen.queryByRole('img')).toBeNull();
+  expect(document.querySelector('.work-card__placeholder')).toBeInTheDocument();
 });
