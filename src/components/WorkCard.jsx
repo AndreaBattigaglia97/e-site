@@ -26,7 +26,6 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
         onMouseEnter={onActivate}
         onClick={() => setSheetOpen(true)}
         role="listitem"
-        aria-expanded={isActive}
         tabIndex={0}
         onFocus={onActivate}
         onBlur={onDeactivate}
