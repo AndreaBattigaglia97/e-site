@@ -16,6 +16,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  transform-origin: center;
+  will-change: transform, opacity;
 }
 
 .hero__logo h1,
