@@ -51,7 +51,9 @@
     "label1": "01 — Featured Films",
     "label2": "02 — Cortometraggi",
     "label3": "03 — Branded Content",
-    "seeAll": "Vedi tutti →"
+    "seeAll": "Vedi tutti →",
+    "scrollLeft": "Scorri a sinistra",
+    "scrollRight": "Scorri a destra"
   },
   "awards": {
     "sectionLabel": "04 — Premi",

@@ -50,7 +50,7 @@ export default function NetflixShelf({ label, items, accentColor }) {
           <button
             className="shelf__arrow shelf__arrow--left"
             onClick={() => scroll(-1)}
-            aria-label="Scorri sinistra"
+            aria-label={t('sections.scrollLeft')}
           >
             ◀
           </button>
@@ -59,7 +59,7 @@ export default function NetflixShelf({ label, items, accentColor }) {
         <div
           className="shelf__track"
           ref={scrollRef}
-          role="listbox"
+          role="list"
         >
           {items.map((item) => (
             <WorkCard
@@ -77,7 +77,7 @@ export default function NetflixShelf({ label, items, accentColor }) {
           <button
             className="shelf__arrow shelf__arrow--right"
             onClick={() => scroll(1)}
-            aria-label="Scorri destra"
+            aria-label={t('sections.scrollRight')}
           >
             ▶
           </button>

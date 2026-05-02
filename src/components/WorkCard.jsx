@@ -27,7 +27,7 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
         onMouseEnter={onActivate}
         onMouseLeave={onDeactivate}
         onClick={() => setSheetOpen(true)}
-        role="option"
+        role="listitem"
         aria-expanded={isActive}
         tabIndex={0}
         onFocus={onActivate}

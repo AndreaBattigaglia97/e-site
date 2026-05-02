@@ -26,7 +26,7 @@ test('NetflixShelf renders all items', () => {
       <NetflixShelf label="02 — Test" items={items} accentColor="#c9a84c" />
     </I18nextProvider>
   );
-  expect(screen.getAllByRole('option')).toHaveLength(2);
+  expect(screen.getAllByRole('listitem')).toHaveLength(2);
 });
 
 test('NetflixShelf renders section label', () => {

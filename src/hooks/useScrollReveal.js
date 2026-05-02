@@ -1,13 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-export default function useScrollReveal(options = {}) {
+export default function useScrollReveal({ threshold = 0.15, rootMargin = '0px' } = {}) {
   const ref = useRef(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
-    const { threshold = 0.15, rootMargin = '0px' } = options;
 
     const children = Array.from(el.children);
     children.forEach((child, i) => {
@@ -34,7 +32,8 @@ export default function useScrollReveal(options = {}) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [options]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [threshold, rootMargin]);
 
   return ref;
 }

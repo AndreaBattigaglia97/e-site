@@ -51,7 +51,9 @@
     "label1": "01 — Featured Films",
     "label2": "02 — Short Films",
     "label3": "03 — Branded Content",
-    "seeAll": "See all →"
+    "seeAll": "See all →",
+    "scrollLeft": "Scroll left",
+    "scrollRight": "Scroll right"
   },
   "awards": {
     "sectionLabel": "04 — Awards",
