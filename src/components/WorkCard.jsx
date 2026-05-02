@@ -8,7 +8,7 @@ export default function WorkCard({ item, accentColor, isActive, onActivate, onDe
   const [sheetOpen, setSheetOpen] = useState(false);
 
   const cardImage = item.bgUrl;
-  const imgStyle = { filter: 'brightness(0.35)' };
+  const imgStyle = {};
 
   const synopsis = i18n.language === 'it'
     ? item.synopsis
